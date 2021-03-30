@@ -1,0 +1,26 @@
+{
+  "name": "afrodev-api-initial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/priscilaestevao/AfroDev-API-initial.git"
+  },
+  "author": "priscilaestevao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/priscilaestevao/AfroDev-API-initial/issues"
+  },
+  "homepage": "https://github.com/priscilaestevao/AfroDev-API-initial#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
