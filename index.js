@@ -1,10 +1,8 @@
-const express = require("express");
+const configExpress = require("./config/configExpress");
 const port = 3000;
 
-const app = express();
+const app = configExpress();
 
-app.listen(port, () => console.log(`server running on the port ${port}`));
-
-app.get("/", (req, res) => {
-  res.send("ok server");
+app.listen(port, () => {
+  console.log(`server running on the port ${port}`);
 });
