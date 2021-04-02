@@ -5,13 +5,13 @@ class Tables {
   }
 
   newScheduling() {
-    const sql = `CREATE TABLE IF NOT EXISTS agendamentos
+    const sql = `CREATE TABLE IF NOT EXISTS schedulings
     (id int NOT NULL AUTO_INCREMENT,
-    nome_cliente varchar(50) NOT NULL,
-    servico varchar(50) NOT NULL,
+    client_name varchar(50) NOT NULL,
+    service varchar(50) NOT NULL,
     status varchar(20) NOT NULL,
-    data_servico date NOT NULL,
-    data_agendamento date NOT NULL,
+    service_date date NOT NULL,
+    scheduling_date date NOT NULL,
     PRIMARY KEY (id))`;
 
     this.connection.query(sql, (error) => {
