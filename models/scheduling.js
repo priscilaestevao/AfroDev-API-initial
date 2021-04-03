@@ -12,7 +12,7 @@ class Scheduling {
     connection.query(sql, [dates, id], (error, result) => {
       if (error) {
         res.status(400).json(error);
-      }
+      } 
       res.status(201).json({ ...dates, id });
     });
   }
@@ -82,14 +82,14 @@ class Scheduling {
     const errors = validations.filter((field) => !field.valid);
 
     if (errors.length > 0) {
-      res.status(400).json(errors);
+      return res.status(400).json(errors);
     }
 
     connection.query(sql, schedulingWithDate, (error, results) => {
       if (error) {
         res.status(400).json(error);
       }
-      res.status(201).json({...schedulingWithDate, id: results.insertId});
+      res.status(201).json({ ...schedulingWithDate, id: results.insertId });
     });
   }
 }
